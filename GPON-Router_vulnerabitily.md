@@ -19,16 +19,8 @@ And voila, you got shell
 > since I have now access to shell, I tried doing things i would do in linux machine like messing around.
 
 > I was able to serve a simple html page using nc command as:
-```while true; do cat index.http | nc -l 8000; done```
+```while true ; do  echo -e "HTTP/1.1 200 OK\n\n $(cat index.html)" | nc -l -p 1500  ; done```
+  index.html being your html file.
 
-index.http being:
-<code>
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=UTF-8
-Server: netcat!
-
-  this is html body
-
-</code>
 
 > I was able to access html page throughout local network as <router-ip>:8000
