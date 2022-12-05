@@ -22,7 +22,7 @@ And voila, you got shell
 ```while true; do cat index.http | nc -l 8000; done```
 
 index.http being:
-<code>
+<code class="notranslate">
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
 Server: netcat!
